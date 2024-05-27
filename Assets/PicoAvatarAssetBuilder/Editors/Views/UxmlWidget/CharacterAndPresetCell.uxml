@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="cellRoot" style="margin-top: 4px; -unity-background-scale-mode: stretch-to-fill;">
+        <ui:Button display-tooltip-when-elided="true" name="btn" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 20px; padding-right: 28px; padding-top: 14px; padding-bottom: 14px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; height: 90px; -unity-text-align: middle-left; font-size: 14px; background-color: rgb(41, 41, 41); color: rgb(255, 255, 255); flex-direction: row;">
+            <ui:VisualElement name="icon" style="height: 100%; width: 50px; flex-direction: row; background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/CreateNewCharacter/female.png?fileID=2800000&amp;guid=5eca6029a5005a64b88f252a5b900756&amp;type=3#female&apos;); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); -unity-background-scale-mode: scale-and-crop; background-color: rgb(68, 68, 66);" />
+            <ui:VisualElement name="info_ele" style="display: flex; height: 100%; width: 88%; flex-shrink: 0; justify-content: space-between;">
+                <ui:Label text="Name" display-tooltip-when-elided="true" name="name_label" enable-rich-text="true" style="border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 0; height: 37px; -unity-font-style: bold;" />
+                <ui:Label text="id" display-tooltip-when-elided="true" name="id_label" style="border-left-width: 5px; border-right-width: 5px; border-top-width: 0; border-bottom-width: 5px; font-size: 11px;" />
+            </ui:VisualElement>
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

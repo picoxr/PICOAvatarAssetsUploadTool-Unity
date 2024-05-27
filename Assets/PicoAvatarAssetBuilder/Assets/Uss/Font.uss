@@ -1,0 +1,15 @@
+Label {
+    -unity-font-definition: url('project://database/Assets/PicoAvatarAssetBuilder/Assets/Fonts/PICO%20Sans%20SC/PICOSansSC-Medium%20SDF.asset?fileID=11400000&guid=293c31ea9e3afc24ab89b4893a410079&type=2#PICOSansSC-Medium SDF');
+}
+
+Button {
+    -unity-font-definition: url('project://database/Assets/PicoAvatarAssetBuilder/Assets/Fonts/PICO%20Sans%20SC/PICOSansSC-Medium%20SDF.asset?fileID=11400000&guid=293c31ea9e3afc24ab89b4893a410079&type=2#PICOSansSC-Medium SDF');
+}
+
+TextField {
+    -unity-font-definition: url('project://database/Assets/PicoAvatarAssetBuilder/Assets/Fonts/PICO%20Sans%20SC/PICOSansSC-Medium%20SDF.asset?fileID=11400000&guid=293c31ea9e3afc24ab89b4893a410079&type=2#PICOSansSC-Medium SDF');
+}
+
+PopupTextElement {
+    -unity-font-definition: url('project://database/Assets/PicoAvatarAssetBuilder/Assets/Fonts/PICO%20Sans%20SC/PICOSansSC-Medium%20SDF.asset?fileID=11400000&guid=293c31ea9e3afc24ab89b4893a410079&type=2#PICOSansSC-Medium SDF');
+}

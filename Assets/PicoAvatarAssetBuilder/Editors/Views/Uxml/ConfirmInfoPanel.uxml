@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/Font.uss?fileID=7433441132597879392&amp;guid=5fa7ee1ba7fb48a285fa3a0cc793600d&amp;type=3#Font" />
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
+    <ui:VisualElement name="Confirm-Info-Root" style="align-items: center;">
+        <ui:VisualElement name="Confirm-Info-Icon" style="width: 64px; height: 64px; background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/Common/WarningDialog.png?fileID=2800000&amp;guid=64b081c4130fc39439e333edd52200c2&amp;type=3#WarningDialog&apos;); -unity-background-scale-mode: stretch-to-fill; margin-left: 10px; margin-right: 10px; margin-top: 35px; margin-bottom: 10px;" />
+        <ui:Label text="Are you sure you want to log out?" display-tooltip-when-elided="true" name="Confirm-Info-Content" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 39px;" />
+        <ui:Button text="Log Out" display-tooltip-when-elided="true" name="Confirm-Info-Confirm" style="width: 293px; height: 48px; background-color: rgb(82, 157, 255); border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; -unity-font-definition: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Fonts/PICO%20Sans%20SC/PICOSansSC-Bold%20SDF.asset?fileID=11400000&amp;guid=52a6d2a7aaf8bff4ea0995fcbb2eeb48&amp;type=2#PICOSansSC-Bold SDF&apos;);">
+            <ui:VisualElement class="common__visualelement" style="margin-left: -5px; margin-right: -5px; margin-top: -1px; margin-bottom: -1px;" />
+        </ui:Button>
+        <ui:Button text="Cancel" display-tooltip-when-elided="true" name="Confirm-Info-Cancel" style="width: 293px; height: 48px; background-color: rgb(80, 80, 80); margin-top: 23px; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; -unity-font-definition: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Fonts/PICO%20Sans%20SC/PICOSansSC-Bold%20SDF.asset?fileID=11400000&amp;guid=52a6d2a7aaf8bff4ea0995fcbb2eeb48&amp;type=2#PICOSansSC-Bold SDF&apos;);">
+            <ui:VisualElement class="common__visualelement" style="margin-left: -5px; margin-right: -5px; margin-top: -24px;" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

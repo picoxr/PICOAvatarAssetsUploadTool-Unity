@@ -1,0 +1,28 @@
+TextField > #unity-text-input {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+ObjectField {
+    background-color: rgba(57, 57, 57, 255);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-radius: 8px;
+}
+
+ObjectField > VisualElement {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.unity-object-field__selector {
+    background-color: rgba(57, 57, 57, 255);
+}

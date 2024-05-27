@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:GroupBox name="facePresetCellGroupBox" style="height: 56px; width: 100%;">
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="facePresetCellButton" style="flex-grow: 1; width: 100%; height: 100%;" />
+    </ui:GroupBox>
+</ui:UXML>

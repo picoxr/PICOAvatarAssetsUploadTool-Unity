@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="flex-direction: row; justify-content: flex-start;">
+        <ui:Foldout text="JointGroup" name="Foldout" value="false" style="font-size: 14px; margin-top: 8px; margin-bottom: 8px; height: auto; width: 100%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Labels" style="width: 50%; height: auto; flex-direction: row; justify-content: flex-start; right: 0; position: absolute; margin-top: 0; margin-bottom: 0; align-items: flex-start; padding-right: 0; flex-shrink: 0; top: 0; left: auto;">
+        <ui:Label text="Position" display-tooltip-when-elided="true" style="margin-right: 0; color: rgba(255, 255, 255, 0.45); left: auto; align-items: stretch; position: absolute; right: 250px; width: 50px;" />
+        <ui:Label text="Rotation" display-tooltip-when-elided="true" style="margin-left: 0; margin-right: 0; color: rgba(255, 255, 255, 0.45); left: auto; position: absolute; right: 150px; align-items: stretch; justify-content: flex-start; width: 50px;" />
+        <ui:Label text="Scale" display-tooltip-when-elided="true" style="margin-left: 0; margin-right: 0; color: rgba(255, 255, 255, 0.45); left: auto; position: absolute; right: 50px; align-items: stretch; transform-origin: center; width: 50px;" />
+    </ui:VisualElement>
+</ui:UXML>

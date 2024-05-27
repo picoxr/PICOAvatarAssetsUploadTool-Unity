@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bb8252cb21484f9292df4975d9dd61, type: 3}
+  m_Name: StringTableConfig
+  m_EditorClassIdentifier: 
+  stringConfigs:
+  - key: NameTip
+    values:
+    - language: en
+      value: This is a unique identifier that can't be modified once created
+  - key: ShowNameTip
+    values:
+    - language: en
+      value: This is the display name visible to the user. Once created, you should
+        go to the WEB Asset Platform to make changes
+  - key: IconTip
+    values:
+    - language: en
+      value: This picture will be shown to the user. Once created, you should go
+        to the WEB Asset Platform to make changes
+  - key: ConfigureSkeletonTip
+    values:
+    - language: en
+      value: The skeleton is the core foundation. Both Base Body and Base AnimationSet
+        depend on the skeleton and need to match it
+  - key: ConfigureAnimationSetTip
+    values:
+    - language: en
+      value: This refers to the base animation that the IK relies on and needs to
+        match your configured skeleton
+  - key: ConfigureBaseBodyTip
+    values:
+    - language: en
+      value: The basic body of avatar, usually consisting of head and body, and needs
+        to match your configured skeleton
+  - key: TipComponentType
+    values:
+    - language: en
+      value: You need to identify what type of component you are currently uploading
+        , which has implications for program processing
+  - key: TipShaderType
+    values:
+    - language: en
+      value: Only officially provided Shader types are supported
+  - key: TipPreviewMode
+    values:
+    - language: en
+      value: You can see the effect when using the Official Shader or the Official
+        Shader in the Unity Editor
+  - key: TipLodGroup0
+    values:
+    - language: en
+      value: No triangle count limit.
+  - key: TipLodGroup1
+    values:
+    - language: en
+      value: Must be less than 25,000 triangles
+  - key: TipLodGroup2
+    values:
+    - language: en
+      value: Must be less than 15,000 triangles
+  - key: TipShaderType2
+    values:
+    - language: en
+      value: You can choose officially supported localized shaders such as hair,
+        eyes, etc.
+  - key: TipCustomShader
+    values:
+    - language: en
+      value: You can reference your own Custom Shader. When the asset is loaded into
+        your own project, it will read the Custom Shader you have set up
+  - key: PerMuscleSettingsTip
+    values:
+    - language: en
+      value: You can adjust individual bones in the body. You can expand the muscle
+        settings to change the range limits of each setting
+  - key: AdditionalSettingsTip
+    values:
+    - language: en
+      value: You can adjust specific effects on the body
+  - key: OfficialMaterialTip
+    values:
+    - language: en
+      value: 'Officially provided Material, with two types: PBR and NPR.'
+  - key: CustomMaterialTip
+    values:
+    - language: en
+      value: User-defined Material, only available for private applications.
+  - key: SaveCustomMaterialTip
+    values:
+    - language: en
+      value: After saving, it can be selected for online use.

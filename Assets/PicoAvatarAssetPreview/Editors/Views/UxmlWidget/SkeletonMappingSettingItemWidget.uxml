@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/SkeletonMappingSettingItem.uss?fileID=7433441132597879392&amp;guid=af39e44f6b0136049b39ffde7c37eefd&amp;type=3#SkeletonMappingSettingItem" />
+    <ui:GroupBox name="SkeletonConfig" style="flex-direction: row; background-color: rgba(255, 255, 255, 0.04); height: 56px; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center; overflow: hidden; display: flex; visibility: visible;">
+        <ui:VisualElement style="width: 100%; height: 100%; justify-content: center;">
+            <ui:Label text="JointName" display-tooltip-when-elided="true" name="JointTypeName" style="width: auto; -unity-text-align: middle-left; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 14px; overflow: hidden; margin-left: 16px; align-items: flex-start; justify-content: center; color: rgba(255, 255, 255, 0.8);" />
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 100%; height: 100%; justify-content: center;">
+            <ui:GroupBox style="background-color: rgba(255, 255, 255, 0.08); border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; height: 32px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 12px; margin-top: 0; margin-bottom: 0; right: auto; position: relative; width: auto;">
+                <uie:ObjectField name="JointTypeName" type="UnityEngine.Transform, UnityEngine.CoreModule" style="justify-content: space-around; flex-direction: row; align-items: center; margin-left: 12px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; width: auto; height: 22px; background-color: rgba(255, 255, 255, 0); font-size: 12px;" />
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:GroupBox>
+</ui:UXML>

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="TestCustomAnimationSet-List-Root" style="width: 100%; height: 100%;">
+        <ui:ScrollView name="animList" style="margin-left: 0; margin-right: 0; margin-top: 32px; padding-left: 32px; padding-right: 32px;" />
+    </ui:VisualElement>
+</ui:UXML>

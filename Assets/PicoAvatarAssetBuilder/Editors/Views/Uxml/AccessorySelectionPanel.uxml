@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/AccessorySelection.uss?fileID=7433441132597879392&amp;guid=424db37ff2247f848a0f5f1166148b90&amp;type=3#AccessorySelection" />
+    <ui:GroupBox name="Content" style="flex-grow: 1;">
+        <ui:ScrollView style="flex-grow: 1;">
+            <ui:GroupBox name="GenderGroupBox" style="flex-direction: row; background-color: rgba(255, 255, 255, 0.04); height: 56px; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 10px; padding-left: 16px; padding-right: 12px; padding-top: 0; padding-bottom: 0; align-items: center; overflow: hidden;">
+                <ui:Label text="Gender" display-tooltip-when-elided="true" style="width: 30%; -unity-text-align: middle-left; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 14px; overflow: hidden;">
+                    <ui:GroupBox name="nameTip" style="width: 17px; height: 17px; background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/Common/Tips.png?fileID=2800000&amp;guid=68ed50e6b78d31c4a9f2825745e3bc78&amp;type=3#Tips&apos;); margin-left: 110px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:Label>
+                <ui:GroupBox style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 70%; flex-direction: row; height: 40px; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; justify-content: space-around; flex-wrap: nowrap; align-items: stretch; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); background-color: rgb(30, 30, 30);">
+                    <ui:GroupBox style="padding-left: 4px; padding-right: 2px; padding-top: 4px; padding-bottom: 4px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 50%; justify-content: space-around; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Button text="Female" display-tooltip-when-elided="true" name="femaleButton" class="ButtonSelected" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 6px; border-bottom-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; font-size: 14px; flex-direction: row; align-items: center; justify-content: center; -unity-text-align: middle-center; white-space: normal; height: 100%; flex-wrap: nowrap;">
+                            <ui:GroupBox style="background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/Common/Preview.png?fileID=2800000&amp;guid=0e8221e5c90ac404bbb6a3148118a7c7&amp;type=3#Preview&apos;); width: 18px; height: 18px; margin-left: -130px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                        </ui:Button>
+                    </ui:GroupBox>
+                    <ui:GroupBox style="padding-left: 2px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; width: 50%; justify-content: space-around; background-color: rgba(0, 0, 0, 0);">
+                        <ui:Button text="Male" display-tooltip-when-elided="true" name="maleButton" class="ButtonUnSelected" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex; visibility: visible; overflow: hidden; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 6px; border-bottom-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; font-size: 14px; flex-direction: row; align-items: center; justify-content: center; height: 100%;">
+                            <ui:GroupBox style="background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/Common/Preview.png?fileID=2800000&amp;guid=0e8221e5c90ac404bbb6a3148118a7c7&amp;type=3#Preview&apos;); width: 18px; height: 18px; margin-left: -130px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                        </ui:Button>
+                    </ui:GroupBox>
+                </ui:GroupBox>
+            </ui:GroupBox>
+            <ui:GroupBox name="PresetsGroupBox" style="flex-grow: 1; height: auto; width: auto;">
+                <ui:ScrollView name="FacePresetScrollView" style="flex-grow: 0;" />
+            </ui:GroupBox>
+        </ui:ScrollView>
+    </ui:GroupBox>
+</ui:UXML>

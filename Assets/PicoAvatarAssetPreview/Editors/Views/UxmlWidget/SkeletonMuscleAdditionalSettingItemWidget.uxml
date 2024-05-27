@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox name="SkeletonAdditionalConfig" style="background-color: rgba(255, 255, 255, 0.04); height: 56px; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; padding-left: 16px; padding-right: 12px; padding-top: 0; padding-bottom: 0; align-items: center; overflow: hidden; display: flex; visibility: visible; flex-direction: row; justify-content: space-between; min-width: auto; min-height: auto;">
+        <ui:Label text="SettingItemName" display-tooltip-when-elided="true" name="SettingItemName" style="position: relative; font-size: 14px;" />
+        <ui:VisualElement style="flex-direction: row; justify-content: flex-end; align-items: center; right: auto; left: auto; position: relative; width: 511px; flex-grow: 0; flex-shrink: 1;">
+            <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="AdditionalValue" style="flex-shrink: 1;" />
+            <uie:FloatField value="0" name="CurrentValue" style="width: 48px; flex-shrink: 1;" />
+        </ui:VisualElement>
+    </ui:GroupBox>
+</ui:UXML>

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/AnimationBoneToggle.uss?fileID=7433441132597879392&amp;guid=bfd38cb3b1e274814981791588e9c5f1&amp;type=3#AnimationBoneToggle" />
+    <ui:GroupBox name="AnimationBoneConfig" style="background-color: rgba(255, 255, 255, 0.04); height: 56px; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; padding-left: 16px; padding-right: 12px; padding-top: 0; padding-bottom: 0; align-items: center; overflow: hidden; display: flex; visibility: visible; flex-direction: row; justify-content: space-between; min-width: auto; min-height: auto;">
+        <ui:VisualElement style="width: 50%; height: 100%; align-items: flex-start; justify-content: center; flex-shrink: 1;">
+            <ui:Label text="SettingItemName" display-tooltip-when-elided="true" name="SettingItemName" style="position: relative;" />
+        </ui:VisualElement>
+        <ui:VisualElement focusable="false" style="flex-direction: row; justify-content: flex-start; align-items: center; right: 0; left: auto; position: absolute; width: 50%; flex-grow: 0; flex-shrink: 0; height: 100%; flex-basis: auto; -unity-text-align: upper-left; white-space: normal;">
+            <ui:Toggle name="PositionToggle" value="false" focusable="true" style="margin-right: 0; position: absolute; left: auto; right: 250px; width: 50px; background-color: rgba(0, 0, 0, 0);" />
+            <ui:Toggle name="RotationToggle" value="false" style="margin-right: 0; position: absolute; left: auto; right: 150px; width: 50px; background-color: rgba(0, 0, 0, 0);" />
+            <ui:Toggle name="ScaleToggle" style="margin-right: 0; position: absolute; left: auto; right: 50px; justify-content: flex-start; flex-direction: row; transform-origin: left; width: 50px;" />
+        </ui:VisualElement>
+    </ui:GroupBox>
+</ui:UXML>

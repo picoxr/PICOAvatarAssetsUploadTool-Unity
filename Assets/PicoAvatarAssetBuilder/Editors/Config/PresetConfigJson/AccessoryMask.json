@@ -1,0 +1,45 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "tags": [
+            "Accessory-Mask"
+        ],
+        "extData": null,
+        "pinType": 1,
+        "version": 0,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                24,
+                1022
+            ],
+            [
+                25,
+                1022
+            ],
+            [
+                26,
+                1022
+            ],
+            [
+                27,
+                1022
+            ],
+            [
+                28,
+                1022
+            ]
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/SkeletonMappingWidget.uss?fileID=7433441132597879392&amp;guid=71338522fd07c6740922e537024a140b&amp;type=3#SkeletonMappingWidget" />
+    <ui:ScrollView elasticity="0.1" style="padding-top: 0; transform-origin: center; padding-right: 0; padding-left: 0; padding-bottom: 0;">
+        <ui:Foldout text="Body" name="Foldout_Body" value="true" style="font-size: 14px;" />
+        <ui:Foldout text="LeftArm" name="Foldout_LeftArm" value="false" style="font-size: 14px;" />
+        <ui:Foldout text="RightArm" name="Foldout_RightArm" value="false" style="font-size: 14px;" />
+        <ui:Foldout text="LeftLeg" name="Foldout_LeftLeg" value="false" style="font-size: 14px;" />
+        <ui:Foldout text="RightLeg" name="Foldout_RightLeg" value="false" style="font-size: 14px;" />
+    </ui:ScrollView>
+</ui:UXML>

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="Avatar3-Import-Root">
+        <ui:VisualElement name="Content" style="min-height: 80%; min-width: 80%;" />
+        <ui:VisualElement name="BottomBar" style="flex-direction: row; align-items: flex-start; justify-content: space-between; top: 0;">
+            <ui:Button text="Back" display-tooltip-when-elided="true" name="BackBtn" style="width: 20%; flex-direction: row; flex-wrap: nowrap;" />
+            <ui:Button text="Next" display-tooltip-when-elided="true" name="NextBtn" style="width: 20%; left: auto; flex-direction: row-reverse; white-space: nowrap; align-items: auto; justify-content: flex-end;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

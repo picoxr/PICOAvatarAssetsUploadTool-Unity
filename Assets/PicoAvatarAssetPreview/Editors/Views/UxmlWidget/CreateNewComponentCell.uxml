@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:GroupBox name="CreateNew" style="margin-left: 24px; margin-right: 0; margin-top: 24px; margin-bottom: 0; padding-left: 0; padding-top: 0; padding-bottom: 0; width: 160px; height: 216px;">
+        <ui:Button display-tooltip-when-elided="true" name="CreateNewBtn" style="background-color: rgba(61, 139, 255, 0.12); height: 100%; width: 100%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; color: rgb(61, 139, 255);">
+            <ui:GroupBox picking-mode="Ignore" style="background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/CreateNewCharacter/add.png?fileID=2800000&amp;guid=d3d3e16588c7a7d49bda418373631582&amp;type=3#add&apos;); height: 18.67px; width: 18.67px; left: 70.67px; top: 89px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-top: 0;" />
+            <ui:Label text="New Component" display-tooltip-when-elided="true" style="-unity-font-style: normal; position: absolute; left: 31px; top: 116px;" />
+        </ui:Button>
+    </ui:GroupBox>
+</ui:UXML>

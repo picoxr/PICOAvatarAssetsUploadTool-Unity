@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
+    <ui:GroupBox name="Upload-Success-Root" style="align-items: stretch; justify-content: flex-start; flex-shrink: 1; flex-grow: 0;">
+        <ui:VisualElement style="background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/Common/GreenYes.png?fileID=21300000&amp;guid=4c6ab0e95e8ca3f498412ced04494113&amp;type=3#GreenYes&apos;); -unity-background-scale-mode: scale-to-fit; width: auto; height: 48px; align-items: stretch; left: auto; flex-grow: 1; max-height: 48px;" />
+        <ui:Label text="Success" display-tooltip-when-elided="true" style="margin-top: 0; padding-top: 0; -unity-text-align: middle-center; justify-content: center; align-items: center; flex-shrink: 1; height: 44px; width: auto; flex-grow: 1; left: auto;" />
+        <ui:Label text="Please go to the Avatar Asset Platform to modify the information" display-tooltip-when-elided="true" style="height: 83px; width: auto; align-items: center; justify-content: center; -unity-text-align: upper-center; flex-shrink: 1; flex-grow: 1; left: auto;" />
+        <ui:Button text="Click here to Avatar Asset Platform" display-tooltip-when-elided="true" name="Upload-Success-Platform" style="width: auto; height: 48px; background-color: rgb(61, 139, 255); -unity-font-definition: url(&apos;project://database/Packages/org.byted.avatar.sdk/Runtime/Fonts/PICO%20Sans%20SC/PICOSansSC-Bold%20SDF.asset?fileID=11400000&amp;guid=52a6d2a7aaf8bff4ea0995fcbb2eeb48&amp;type=2#PICOSansSC-Bold SDF&apos;); flex-shrink: 1; flex-grow: 1; max-height: 48px;">
+            <ui:VisualElement class="common__visualelement" style="margin-left: -5px; margin-right: -5px; margin-top: -1px; margin-bottom: -1px;" />
+        </ui:Button>
+        <ui:Button text="Upload another asset" display-tooltip-when-elided="true" name="Upload-Success-Another" style="width: auto; height: 48px; margin-top: 18px; background-color: rgb(80, 80, 80); -unity-font-definition: url(&apos;project://database/Packages/org.byted.avatar.sdk/Runtime/Fonts/PICO%20Sans%20SC/PICOSansSC-Bold%20SDF.asset?fileID=11400000&amp;guid=52a6d2a7aaf8bff4ea0995fcbb2eeb48&amp;type=2#PICOSansSC-Bold SDF&apos;); flex-shrink: 1; flex-grow: 1; max-height: 48px;">
+            <ui:VisualElement class="common__visualelement" style="margin-left: -5px; margin-right: -5px; margin-bottom: -19px;" />
+        </ui:Button>
+    </ui:GroupBox>
+</ui:UXML>

@@ -1,0 +1,97 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "extData": null,
+        "pinType": 1,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                12,
+                2047
+            ],
+            [
+                11,
+                2047
+            ],
+            [
+                10,
+                2047
+            ],
+            [
+                13,
+                2047
+            ],
+            [
+                14,
+                2047
+            ],
+            [
+                15,
+                2047
+            ],
+            [
+                16,
+                2047
+            ],
+            [
+                17,
+                2047
+            ],
+            [
+                18,
+                2047
+            ],
+            [
+                9,
+                2047
+            ],
+            [
+                8,
+                2047
+            ],
+            [
+                7,
+                2047
+            ],
+            [
+                6,
+                2047
+            ],
+            [
+                5,
+                2047
+            ],
+            [
+                4,
+                2047
+            ],
+            [
+                3,
+                2047
+            ],
+            [
+                0,
+                2047
+            ],
+            [
+                2,
+                2047
+            ],
+            [
+                1,
+                2047
+            ]
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

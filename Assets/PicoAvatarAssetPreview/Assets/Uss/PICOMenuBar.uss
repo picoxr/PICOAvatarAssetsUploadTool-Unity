@@ -1,0 +1,102 @@
+.PICOlogo {
+    flex-grow: 1;
+    background-image: url('project://database/Assets/PicoAvatarAssetBuilder/Assets/Svg/PICOlogo.svg?fileID=7388822144124034973&guid=9ef8ef79279188f44858d6aaa9072647&type=3#PICOlogo');
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    top: 46px;
+    left: 23.5px;
+}
+
+.PICO {
+    width: 58px;
+    height: 17.1px;
+    max-width: 58px;
+    min-width: 58px;
+    max-height: 17.1px;
+    min-height: 17.1px;
+    background-image: url('project://database/Assets/PicoAvatarAssetBuilder/Assets/Svg/PICO.svg?fileID=7388822144124034973&guid=5ce02ffa50f5dfc4296d844fb5ecd5bf&type=3#PICO');
+    left: 61px;
+    top: 23px;
+}
+
+.Avatar-Upload-Tool {
+    left: 126px;
+    font-size: 8px;
+    top: 5px;
+}
+
+.text-killing {
+    -unity-text-align: upper-center;
+    color: rgb(242, 242, 242);
+    top: 76px;
+    position: absolute;
+    left: 40px;
+    -unity-font-style: normal;
+    font-size: 12px;
+}
+
+.menu__button {
+    width: 168px;
+    height: 52px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(20, 20, 20);
+    padding-left: 14px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    max-width: initial;
+    max-height: initial;
+    min-height: auto;
+    min-width: auto;
+    display: flex;
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    opacity: 1;
+    border-left-color: rgb(20, 20, 20);
+    border-right-color: rgb(20, 20, 20);
+    border-top-color: rgb(20, 20, 20);
+    border-bottom-color: rgb(20, 20, 20);
+    left: auto;
+    position: absolute;
+    flex-grow: 1;
+}
+
+.menu__button--active {
+    width: 168px;
+    height: 52px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(38, 38, 38);
+    padding-left: 14px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    max-width: initial;
+    max-height: initial;
+    min-height: auto;
+    min-width: auto;
+    display: flex;
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    opacity: 1;
+    border-left-color: rgb(20, 20, 20);
+    border-right-color: rgb(20, 20, 20);
+    border-top-color: rgb(20, 20, 20);
+    border-bottom-color: rgb(20, 20, 20);
+    left: auto;
+    position: absolute;
+    flex-grow: 1;
+}

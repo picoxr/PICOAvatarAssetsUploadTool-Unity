@@ -1,0 +1,76 @@
+.ButtonUnSelected {
+    background-color: rgba(30, 30, 30, 255);
+}
+
+.ButtonUnSelected:hover {
+    background-color: rgba(50, 50, 50, 255);
+}
+
+.ButtonSelected {
+    background-color: rgba(61, 61, 61, 255);
+}
+
+.ButtonSelected:hover {
+    background-color: rgba(81, 81, 81, 255);
+}
+
+.ComponentDropdown .unity-base-popup-field__input {
+    border-width: 0;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.ComponentDropdown .unity-base-popup-field__text {
+    margin-left: 8px;
+    margin-top: 0;
+}
+
+.ComponentDropdown .unity-base-popup-field__arrow {
+    margin-right: 4px;
+}
+
+#NextButton {
+    background-color: rgba(61, 139, 255, 255);
+}
+
+#NextButton:hover {
+    background-color: rgba(81, 159, 255, 255);
+}
+
+#Add {
+    background-color: rgba(34, 44, 58, 255);
+}
+
+#Add:hover {
+    background-color: rgba(54, 64, 78, 255);
+}
+
+#Remove {
+    background-color: rgba(49, 49, 49, 255);
+}
+
+#Remove:hover {
+    background-color: rgba(69, 69, 69, 255);
+}
+
+.ComponentObjectField {
+    background-color: rgba(57, 57, 57, 255);
+    border-radius: 8px;
+}
+
+.ComponentObjectField:hover {
+    background-color: rgba(77, 77, 77, 255);
+}
+
+.ComponentObjectField .unity-object-field__input {
+    margin-left: 4px;
+}
+
+#LodNameLabel {
+    color: rgba(210, 210, 210, 255);
+}
+
+#LodNameLabel:hover {
+    color: rgba(255, 255, 255, 255);
+}

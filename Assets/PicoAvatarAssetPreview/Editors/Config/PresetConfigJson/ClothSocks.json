@@ -1,0 +1,41 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "tags": [
+            "cloth-Socks"
+        ],
+        "extData": null,
+        "pinType": 1,
+        "version": 0,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                3,
+                14
+            ],
+            [
+                0,
+                14
+            ],
+            [
+                2,
+                14
+            ],
+            [
+                1,
+                14
+            ]
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

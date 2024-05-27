@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox name="SkeletonMuscleConfig" style="background-color: rgba(255, 255, 255, 0.04); height: 56px; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; margin-left: 0; margin-right: 0; margin-top: 2px; margin-bottom: 2px; padding-left: 16px; padding-right: 12px; padding-top: 0; padding-bottom: 0; align-items: center; overflow: hidden; display: flex; visibility: visible; flex-direction: row; justify-content: space-between; min-width: auto; min-height: auto;">
+        <ui:VisualElement style="width: 50%; height: 100%; align-items: flex-start; justify-content: center; flex-shrink: 1;">
+            <ui:Label text="SettingItemName" display-tooltip-when-elided="true" name="SettingItemName" style="position: relative;" />
+        </ui:VisualElement>
+        <ui:VisualElement focusable="false" style="flex-direction: row; justify-content: flex-end; align-items: center; right: auto; left: auto; position: relative; width: 50%; flex-grow: 0; flex-shrink: 1; height: 100%; flex-basis: auto; -unity-text-align: upper-left; white-space: normal;">
+            <uie:FloatField value="-30" name="MinValue" style="width: 52px; position: relative; flex-shrink: 1; margin-right: 5px; margin-left: 5px;" />
+            <ui:VisualElement style="width: 100%; height: 100%; top: auto;">
+                <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="Preview" style="flex-shrink: 1; flex-direction: column-reverse; width: auto; top: 18px;">
+                    <ui:VisualElement style="width: 40px; height: 20px; -unity-background-image-tint-color: rgba(255, 255, 255, 0.06); border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; background-color: rgba(255, 255, 255, 0.06); flex-direction: row; align-items: center; justify-content: center; -unity-text-align: upper-center; transform-origin: center; flex-shrink: 0; position: absolute; top: -22px; left: -16px;">
+                        <ui:Label text="0" display-tooltip-when-elided="true" name="PreviewValue" style="border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; background-color: rgba(0, 0, 0, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; align-items: auto; -unity-text-align: middle-center;" />
+                    </ui:VisualElement>
+                </ui:Slider>
+            </ui:VisualElement>
+            <uie:FloatField value="30" name="MaxValue" style="width: 52px; flex-shrink: 1; flex-direction: row; margin-left: 5px; margin-right: 5px;" />
+        </ui:VisualElement>
+    </ui:GroupBox>
+</ui:UXML>

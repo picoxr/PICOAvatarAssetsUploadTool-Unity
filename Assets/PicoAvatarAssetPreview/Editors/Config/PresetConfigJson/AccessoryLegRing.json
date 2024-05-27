@@ -1,0 +1,37 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "tags": [
+            "Accessory-LegRing"
+        ],
+        "extData": null,
+        "pinType": 1,
+        "version": 0,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                7,
+                14
+            ],
+            [
+                6,
+                14
+            ],
+            [
+                5,
+                14
+            ]
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

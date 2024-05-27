@@ -1,0 +1,25 @@
+.mainwin__menubar-ve {
+    width: 30px;
+    height: 100%;
+    max-width: none;
+    min-width: auto;
+    max-height: none;
+    min-height: auto;
+    background-color: rgba(20, 20, 20, 255);
+}
+
+.mainwin__navigation-ve {
+    width: 1076px;
+    height: 48px;
+    flex-grow: 1;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 48px;
+    min-height: 48px;
+    background-color: rgb(49, 49, 49);
+}
+
+.mainwin__display-ve {
+    flex-grow: 1;
+    background-color: rgb(31, 31, 31);
+}

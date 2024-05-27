@@ -1,0 +1,29 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "extData": null,
+        "pinType": 1,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                21,
+                2047
+            ],
+            [
+                19,
+                2047
+            ]
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

@@ -1,0 +1,37 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "tags": [
+            "clothBasic-Bottom"
+        ],
+        "extData": null,
+        "pinType": 1,
+        "version": 0,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                9,
+                1022
+            ],
+            [
+                8,
+                1022
+            ],
+            [
+                7,
+                1022
+            ]
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

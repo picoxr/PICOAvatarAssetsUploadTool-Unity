@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:GroupBox name="Common-Warning-Root" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 10px; width: 552px; flex-shrink: 1; flex-grow: 1; flex-direction: row; height: auto;">
+        <ui:VisualElement style="background-color: rgba(255, 186, 0, 0.12); flex-grow: 1; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; width: 340px; min-width: 340px; flex-direction: row; display: flex; height: auto;">
+            <ui:GroupBox style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-top: 0; padding-bottom: 0; right: auto; flex-wrap: nowrap; flex-direction: row; width: 552px; flex-grow: 1; flex-shrink: 1;">
+                <ui:Label text="Warning" display-tooltip-when-elided="true" style="color: rgb(255, 186, 0); margin-top: 5px; margin-bottom: 5px; -unity-font-style: bold; -unity-text-align: middle-center; flex-basis: 20%;" />
+                <ui:Label text="{0} missing texture: {1} {0} missing texture: {1} {0} missing texture: {1}dsdadsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" display-tooltip-when-elided="true" name="Common-Content-Message" enable-rich-text="false" style="-unity-text-align: middle-left; white-space: normal; width: 251px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; flex-grow: 1; flex-shrink: 1;" />
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:GroupBox>
+</ui:UXML>

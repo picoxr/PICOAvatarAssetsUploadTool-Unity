@@ -1,0 +1,203 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "extData": null,
+        "pinType": 1,
+        "assetType": 11,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                21,
+                1
+            ],
+            [
+                19,
+                1
+            ],
+            [
+                12,
+                1
+            ],
+            [
+                11,
+                1
+            ],
+            [
+                10,
+                1
+            ],
+            [
+                13,
+                1
+            ],
+            [
+                14,
+                1
+            ],
+            [
+                15,
+                1
+            ],
+            [
+                16,
+                1
+            ],
+            [
+                17,
+                1
+            ],
+            [
+                18,
+                1
+            ],
+            [
+                9,
+                1
+            ],
+            [
+                8,
+                1
+            ],
+            [
+                7,
+                1
+            ],
+            [
+                6,
+                1
+            ],
+            [
+                5,
+                1
+            ],
+            [
+                4,
+                1
+            ],
+            [
+                3,
+                1
+            ],
+            [
+                0,
+                1
+            ],
+            [
+                2,
+                1
+            ],
+            [
+                1,
+                1
+            ]
+        ]
+    },
+    "baseBody": {
+        "meshes": [
+            {
+                "name": "Head",
+                "meshRegionLayerMasks": [
+                    [
+                        21,
+                        1
+                    ],
+                    [
+                        19,
+                        1
+                    ]
+                ]
+            },
+            {
+                "name": "Body",
+                "meshRegionLayerMasks": [
+                    [
+                        12,
+                        1
+                    ],
+                    [
+                        11,
+                        1
+                    ],
+                    [
+                        10,
+                        1
+                    ],
+                    [
+                        13,
+                        1
+                    ],
+                    [
+                        14,
+                        1
+                    ],
+                    [
+                        15,
+                        1
+                    ],
+                    [
+                        16,
+                        1
+                    ],
+                    [
+                        17,
+                        1
+                    ],
+                    [
+                        18,
+                        1
+                    ],
+                    [
+                        9,
+                        1
+                    ],
+                    [
+                        8,
+                        1
+                    ],
+                    [
+                        7,
+                        1
+                    ],
+                    [
+                        6,
+                        1
+                    ],
+                    [
+                        5,
+                        1
+                    ],
+                    [
+                        4,
+                        1
+                    ],
+                    [
+                        3,
+                        1
+                    ],
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        2,
+                        1
+                    ],
+                    [
+                        1,
+                        1
+                    ]
+                ]
+            }
+        ]
+    },
+    "assetPath": "prefab/resource.prefab",
+    "assetType": "model"
+}

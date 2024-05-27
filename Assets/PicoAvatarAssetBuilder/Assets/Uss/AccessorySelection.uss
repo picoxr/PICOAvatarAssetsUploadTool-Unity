@@ -1,0 +1,15 @@
+.ButtonUnSelected {
+    background-color: rgba(30, 30, 30, 255);
+}
+
+.ButtonUnSelected:hover {
+    background-color: rgba(50, 50, 50, 255);
+}
+
+.ButtonSelected {
+    background-color: rgba(61, 61, 61, 255);
+}
+
+.ButtonSelected:hover {
+    background-color: rgba(81, 81, 81, 255);
+}

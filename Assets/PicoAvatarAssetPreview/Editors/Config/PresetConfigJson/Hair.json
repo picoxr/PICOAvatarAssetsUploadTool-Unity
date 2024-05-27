@@ -1,0 +1,29 @@
+{
+    "items": [],
+    "version": "1.0",
+    "assetMeta": {
+        "tags": [
+            "cloth-Hair"
+        ],
+        "extData": null,
+        "pinType": 1,
+        "version": 0,
+        "assetType": 13,
+        "pinEditAttrs": {
+            "regionMap": null,
+            "colorFlags": 0,
+            "shoeParams": null,
+            "regionColors": []
+        },
+        "subAssetMetas": null,
+        "texRegionLayerMasks": null,
+        "meshRegionLayerMasks": [
+            [
+                21,
+                1022
+            ]
+        ]
+    },
+    "assetType": "model",
+    "assetPath": "prefab/resource.prefab"
+}

@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/Font.uss?fileID=7433441132597879392&amp;guid=5fa7ee1ba7fb48a285fa3a0cc793600d&amp;type=3#Font" />
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
+    <ui:VisualElement name="Warining-Panel-Root" focusable="true" style="width: 600px; height: 368px; background-color: rgb(20, 20, 20); justify-content: space-between;">
+        <ui:GroupBox>
+            <ui:Label text="The uploaded asset&apos;s material needs to be converted to an official material, please select the type you want and let us know if you want to keep the custom material." display-tooltip-when-elided="true" style="white-space: normal; font-size: 13px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
+        </ui:GroupBox>
+        <ui:VisualElement style="flex-basis: 6%; height: auto;" />
+        <ui:ScrollView name="MaterialConfigPanel-ScrollView" style="align-items: center; justify-content: center; flex-grow: 1; flex-basis: 74%;" />
+        <ui:VisualElement name="Node-Button-Group" style="justify-content: flex-end; flex-direction: row; width: 98%; height: 100%; align-items: center; margin-right: 0; display: none; flex-basis: 20%; flex-grow: 1;">
+            <ui:Button text="Cancel" display-tooltip-when-elided="true" name="Nod-Button-Cancel" style="width: 85px; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; background-color: rgba(255, 255, 255, 0.08); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; height: 32px; border-left-color: rgb(80, 80, 80); border-right-color: rgb(80, 80, 80); border-top-color: rgb(80, 80, 80); border-bottom-color: rgb(80, 80, 80); align-items: center;">
+                <ui:VisualElement class="common__visualelement" style="width: 118%; height: 100%; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; -unity-background-scale-mode: stretch-to-fill; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+            </ui:Button>
+            <ui:Button text="Next Step" display-tooltip-when-elided="true" name="Nod-Button-NextStep" style="width: 85px; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; background-color: rgb(61, 139, 255); height: 32px; font-size: 14px; align-items: center;">
+                <ui:VisualElement class="common__visualelement" style="width: 118%; height: 100%;" />
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="mainwin__tipcontainer-ve" style="position: absolute; width: 400px;">
+            <ui:Label text="Label" display-tooltip-when-elided="false" enable-rich-text="false" picking-mode="Ignore" name="mainwin__tip-ve" style="position: absolute; max-width: none; padding-left: 12px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px; background-color: rgb(20, 20, 20); border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; white-space: normal; display: flex; visibility: hidden; color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

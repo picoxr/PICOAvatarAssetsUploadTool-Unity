@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Asset-Upload-Panel" style="flex-grow: 1;">
+        <ui:Label text="Success" display-tooltip-when-elided="true" name="UploadResultStateText" style="align-items: stretch; white-space: nowrap; -unity-text-align: upper-center; margin-top: 50px; justify-content: center;" />
+        <ui:Label text="Click here to configure the asset" display-tooltip-when-elided="true" name="UploadRestTip" style="-unity-text-align: upper-center; margin-top: 100px;" />
+        <ui:Button text="Upload another asset" display-tooltip-when-elided="true" name="UploadResultBackBtn" style="margin-top: 80px; width: 336px; -unity-text-align: middle-center; align-items: auto; white-space: nowrap; height: 26px;" />
+        <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+            <ui:Button text="Back" display-tooltip-when-elided="true" name="BackBtn" />
+            <ui:Button text="Next" display-tooltip-when-elided="true" name="NextBtn" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

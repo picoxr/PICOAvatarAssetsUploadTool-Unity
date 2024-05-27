@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/PicoAvatarAssetBuilder/Assets/Uss/SkeletonMappingWidget.uss?fileID=7433441132597879392&amp;guid=71338522fd07c6740922e537024a140b&amp;type=3#SkeletonMappingWidget" />
+    <ui:VisualElement name="AnimationBoneConfig_All_Bones">
+        <ui:VisualElement style="height: 22px; margin-bottom: 16px; align-items: center; flex-direction: row;">
+            <ui:VisualElement name="AnimationBoneConfig_Info" style="width: 16px; height: 16px; margin-left: 0; background-image: url(&apos;project://database/Assets/PicoAvatarAssetBuilder/Assets/Icon/Common/info.png?fileID=2800000&amp;guid=0916ed4d43cce401fa98441e5a706097&amp;type=3#info&apos;); margin-right: 2px; margin-top: 2px; flex-shrink: 0;" />
+            <ui:Label display-tooltip-when-elided="true" text="Tip" name="AnimationBoneConfig_Info_Label" style="color: rgba(255, 255, 255, 0.18); font-size: 14px; justify-content: center; margin-top: 2px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Group_Body" style="margin-bottom: 2px;">
+            <ui:Label text="Body" display-tooltip-when-elided="true" name="Label" style="font-size: 14px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Group_Head" style="margin-bottom: 2px;">
+            <ui:Label text="Head" display-tooltip-when-elided="true" name="Label" style="font-size: 14px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Group_LeftHand" style="margin-bottom: 2px;">
+            <ui:Label text="LeftHand" display-tooltip-when-elided="true" name="Label" style="font-size: 14px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Group_RightHand" style="margin-bottom: 2px;">
+            <ui:Label text="RightHand" display-tooltip-when-elided="true" name="Label" style="font-size: 14px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
