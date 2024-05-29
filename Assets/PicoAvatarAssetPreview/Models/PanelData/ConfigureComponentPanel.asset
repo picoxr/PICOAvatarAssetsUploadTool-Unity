@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a5978de004b4fd2b32ac2282a2b2a8, type: 3}
+  m_Script: {fileID: 11500000, guid: c00c7c947ddd84512974f1cbfb049860, type: 3}
   m_Name: ConfigureComponentPanel
   m_EditorClassIdentifier: 
   previousPanel: {fileID: 0}

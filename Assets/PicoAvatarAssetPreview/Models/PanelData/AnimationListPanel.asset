@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bdaf9fbd825453bbb97d840e0acbf7, type: 3}
+  m_Script: {fileID: 11500000, guid: add5d1edd414b4a0b942a8a388c357d5, type: 3}
   m_Name: AnimationListPanel
   m_EditorClassIdentifier: 
   currentSelectedMenuIndex: 0

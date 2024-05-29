@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7006bcf8583e4ffb9095afee75dfc7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0facdc95695934bc583acd9a97684459, type: 3}
   m_Name: UploadFailurePanel
   m_EditorClassIdentifier: 

@@ -18,7 +18,7 @@ namespace Pico.AvatarAssetPreview{
         private const uint DEFAULT_LOG_FILE_EXPIRED_DAY = 14;
         private const long DEFAULT_CACHE_FILE_SIZE = 65536;
         private const long DEFAULT_CACHE_FILE_SIZE_TOTAL = 196608;
-        private const string DEFAULT_PUBLIC_KEY = "";
+        private const string DEFAULT_PUBLIC_KEY = "fecbb32b759120b672045f74edc41d159b6a426ffc863b9e0be9ad4be12824546f549959b838993a430344f15197221e87bd362298814c75f5068148b980306f";
         private const string TAG = "PicoAvatarAssetsOpenPlatform";
 
         private const bool ENABLE_CLOUD = false;

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 830f8fe7f40914efdadbd937d12903b8, type: 3}
+  m_Script: {fileID: 11500000, guid: b94a4454bfac0409d9dfce695fe233df, type: 3}
   m_Name: AssetUploadPanel
   m_EditorClassIdentifier: 
   previousPanel: {fileID: 0}

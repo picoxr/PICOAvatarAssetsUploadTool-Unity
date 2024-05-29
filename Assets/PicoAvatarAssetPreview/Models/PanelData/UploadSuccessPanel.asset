@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20ecb2d4b7c4841c38004bfb1cc4372c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fcc0be2877254278b90ab30631f548b, type: 3}
   m_Name: UploadSuccessPanel
   m_EditorClassIdentifier: 

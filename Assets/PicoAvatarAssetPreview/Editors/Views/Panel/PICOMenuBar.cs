@@ -56,8 +56,8 @@ namespace Pico
             private readonly Color _activeStyle = new(1f, 1f, 1f, 1f);
             private readonly Color _unActiveStyle = new(1f, 1f, 1f, 0.4f);
             
-            private const string DocsUrl_CN = "https://developer-cn.picoxr.com/document/unity-avatar/get-started-with-avatar-uploader/";
-            private const string DocsUrl_OVERSEA = "https://developer.picoxr.com/document/unity-avatar/get-started-with-avatar-uploader/";
+            private const string DocsUrl_CN = "https://developer-cn.picoxr.com/document/unity-avatar-uploader/get-started-with-avatar-uploader/";
+            private const string DocsUrl_OVERSEA = "https://developer.picoxr.com/document/unity-avatar-uploader/get-started-with-avatar-uploader/";
             
             private WebImage _iconImage;
             public static PICOMenuBar instance

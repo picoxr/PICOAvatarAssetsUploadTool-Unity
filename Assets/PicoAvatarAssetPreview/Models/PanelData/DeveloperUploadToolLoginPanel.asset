@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed0798fd01214a8886a4285b502e478, type: 3}
+  m_Script: {fileID: 11500000, guid: 72a61dc383f6b430c99b1f97c5d87151, type: 3}
   m_Name: DeveloperUploadToolLoginPanel
   m_EditorClassIdentifier: 
