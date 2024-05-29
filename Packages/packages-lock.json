@@ -287,7 +287,7 @@
       "hash": "24ab3936068744dd64ade9ad630b0df9fd2fbf65"
     },
     "org.byted.avatar.sdk": {
-      "version": "https://github.com/Pico-Developer/PICO-Avatar-SDK-Unity.git",
+      "version": "https://github.com/Pico-Developer/PICO-Avatar-SDK-Unity.git#V2.0.0",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -297,7 +297,7 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.render-pipelines.universal": "10.6.0"
       },
-      "hash": "b12bbfd9bf569b5fa6a13cb1dee0c53537f0019e"
+      "hash": "4afec9b88dd663605acff61b5ec215344af6f700"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
