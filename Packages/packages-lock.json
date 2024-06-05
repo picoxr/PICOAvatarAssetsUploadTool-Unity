@@ -277,27 +277,25 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.picoxr": {
-      "version": "https://github.com/Pico-Developer/PICO-Unity-Integration-SDK.git",
+      "version": "file:../CustomPackages/PICO Unity Integration SDK_250",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.xr.management": "4.0.0",
         "com.unity.xr.interaction.toolkit": "2.0.0"
-      },
-      "hash": "24ab3936068744dd64ade9ad630b0df9fd2fbf65"
+      }
     },
     "org.byted.avatar.sdk": {
-      "version": "https://github.com/Pico-Developer/PICO-Avatar-SDK-Unity.git#V2.0.0",
+      "version": "file:../CustomPackages/PICOUnityAvatarSDK-2.0.0",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.inputsystem": "1.5.1",
         "com.unity.modules.uielements": "1.0.0",
         "com.unity.mathematics": "1.2.6",
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.render-pipelines.universal": "10.6.0"
-      },
-      "hash": "4afec9b88dd663605acff61b5ec215344af6f700"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
