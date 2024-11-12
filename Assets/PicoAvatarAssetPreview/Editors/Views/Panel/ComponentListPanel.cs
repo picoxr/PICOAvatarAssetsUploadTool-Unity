@@ -788,7 +788,9 @@ namespace Pico.AvatarAssetPreview
             
             var componentSetting = new PaabComponentImportSetting();
             if (panel.CharacterInfo.character.avatar_style == "PicoAvatar3")
-                componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Official;
+                componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Official_1_0;
+            else if(panel.CharacterInfo.character.avatar_style == "PicoAvatar4")
+                componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Official_2_0;
             else
                 componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Custom;
             componentSetting.componentType = componentType;
@@ -855,7 +857,9 @@ namespace Pico.AvatarAssetPreview
             
             var componentSetting = new PaabComponentImportSetting();
             if (panel.CharacterInfo.character.avatar_style == "PicoAvatar3")
-                componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Official;
+                componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Official_1_0;
+            else if(panel.CharacterInfo.character.avatar_style == "PicoAvatar4")
+                componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Official_2_0;
             else
                 componentSetting.componentSource = PaabComponentImportSetting.ComponentSource.Custom;
             componentSetting.componentType = componentType;

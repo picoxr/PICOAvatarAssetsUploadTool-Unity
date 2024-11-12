@@ -9,6 +9,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Unity.EditorCoroutines.Editor;
+using Pico.Avatar;
 
 namespace Pico
 {
@@ -193,7 +194,7 @@ namespace Pico
                 public string Content;
                 
                 public bool isOfficialMaterial;
-                public OfficialShaderTheme ShaderTheme;
+                public OfficialShaderTheme ShaderTheme = OfficialShaderTheme.PicoAvatarLit;
                 public bool saveCustomMaterial;
 
                 public MaterialConfigPanelCellData(string content)
@@ -224,14 +225,18 @@ namespace Pico
                     materialTypeDropdown.RegisterValueChangedCallback((eve) =>
                     {
                         _materialType = eve.newValue;
-                        var data = GetData<MaterialConfigPanelCellData>();
-                        if (_materialType == "NPR")
+                        if (_materialType == "PBR")
                         {
-                            data.ShaderTheme = OfficialShaderTheme.PicoNPR;
+                            _materialType = "AvatarLit";
+                        }
+                        var data = GetData<MaterialConfigPanelCellData>();
+                        if (AvatarConstants.s_shaderNames.ContainsKey(_materialType) && AvatarConstants.s_officialShaderNameThemes.ContainsKey(AvatarConstants.s_shaderNames[_materialType]))
+                        {
+                            data.ShaderTheme = AvatarConstants.s_officialShaderNameThemes[AvatarConstants.s_shaderNames[_materialType]];
                         }
                         else
                         {
-                            data.ShaderTheme = OfficialShaderTheme.PicoPBR;
+                            data.ShaderTheme = OfficialShaderTheme.PicoAvatarLit;
                         }
                     });
                     

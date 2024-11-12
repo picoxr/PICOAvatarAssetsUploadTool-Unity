@@ -286,7 +286,7 @@
       }
     },
     "org.byted.avatar.sdk": {
-      "version": "file:../CustomPackages/PICOUnityAvatarSDK-2.0.0",
+      "version": "file:../CustomPackages/PICOUnityAvatarSDK-2.1.0",
       "depth": 0,
       "source": "local",
       "dependencies": {

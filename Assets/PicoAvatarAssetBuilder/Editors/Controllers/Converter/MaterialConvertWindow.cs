@@ -92,15 +92,15 @@ namespace Pico.Avatar
                 string sourceMaterialGuid = AssetDatabase.AssetPathToGUID(sourceMaterialPath);
                 string sourceMaterialName = source.name;
 
-                if (theme == OfficialShaderTheme.PicoPBR)
+                if (AvatarConstants.s_officialShaderThemeNames.ContainsKey(theme))
                 {
-                    targetOfficialMaterial = new Material(Shader.Find("PAV/URP/PicoPBR"));
-                    targetOfficialMaterial.name = sourceMaterialName + "_OfficialPBR";
+                    targetOfficialMaterial = new Material(Shader.Find(AvatarConstants.s_officialShaderThemeNames[theme]));
+                    targetOfficialMaterial.name = sourceMaterialName + AvatarConstants.s_officialMaterialThemePostfixes[theme];
                 }
-                else if (theme == OfficialShaderTheme.PicoNPR)
+                else
                 {
-                    targetOfficialMaterial = new Material(Shader.Find("PAV/URP/PicoNPR"));
-                    targetOfficialMaterial.name = sourceMaterialName + "_OfficialNPR";
+                    targetOfficialMaterial = new Material(Shader.Find("PicoAvatar/AvatarLit"));
+                    targetOfficialMaterial.name = sourceMaterialName + "_Official_AvatarLit";
                 }
 
                 int sourcePropertyCount = ShaderUtil.GetPropertyCount(source.shader);

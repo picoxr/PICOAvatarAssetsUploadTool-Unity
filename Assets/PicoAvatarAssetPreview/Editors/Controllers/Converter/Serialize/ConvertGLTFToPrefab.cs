@@ -5,6 +5,7 @@ using UnityEngine;
 using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
+using Pico.Avatar;
 
 namespace Pico
 {
@@ -60,20 +61,33 @@ namespace Pico
 
                 if (!_init)
                 {
-                    _init = true;
-
                     string dependResZip = parameter.appDataPath + "/../" + AvatarConverter.converterRootDir + "/Serialize/dependRes.zip";
                     dependResZip = new FileInfo(dependResZip).FullName.Replace("\\", "/");
-
-                    if (!Directory.Exists(dependResDir))
+                    
+                    bool dirExist = Directory.Exists(dependResDir);
+                    // reuse AppSetting's version for dependRes
+                    bool versionMatch = false;
+                    string versionFilePath = dependResDir + "/version.txt";
+                    string versionContent = AppSettings.avatarSdkVersion + "-" + AppSettings.unityPluginCommit + "-" + AppSettings.avatarUploaderVersion;
+                    if (File.Exists(versionFilePath))
+                    {
+                        string content = File.ReadAllText(versionFilePath);
+                        versionMatch = content == versionContent;
+                    }
+                    //
+                    bool toUnzip = (!dirExist) || (!versionMatch);
+                    if (toUnzip)
                     {
                         ZipUtility.UnzipFile(dependResZip, dependResDirParent);
-
+                        File.WriteAllText(versionFilePath, versionContent);
 #if UNITY_EDITOR_OSX
                         SetExeMode(dependResDir + "/astcenc/astcenc-avx2");
                         SetExeMode(dependResDir + "/astcenc/astcenc-neon");
+                        SetExeMode(dependResDir + "/astcenc/textureConverter");
 #endif
                     }
+
+                    _init = true;
                 }
                 Debug.Assert(Directory.Exists(dependResDir));
 

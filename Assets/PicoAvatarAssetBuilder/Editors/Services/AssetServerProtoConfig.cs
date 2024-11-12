@@ -30,8 +30,9 @@ namespace Pico.AvatarAssetBuilder
 #endregion
 
         public const bool IsBoe = false;
+        public const bool IsPpe = false;
 
-#region server url
+        #region server url
 
         //Login
         public const string LocalListernAdress = "http://127.0.0.1:{0}/auth/callback/";
