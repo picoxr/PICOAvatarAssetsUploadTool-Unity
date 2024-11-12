@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac93453b9fa4944faaf41c0ae23d179b, type: 3}
+  m_Script: {fileID: 11500000, guid: ddf71d89bd43445568a4a29365d6a2ed, type: 3}
   m_Name: UpdateCharacterPanel
   m_EditorClassIdentifier: 
   previousPanel: {fileID: 0}

@@ -23,15 +23,16 @@ namespace Pico.AvatarAssetPreview
             {
                 { AssetServerType.China, "https://avatar.picovr.com" },
                 { AssetServerType.Global, "https://avatar-global.picovr.com" },
-                { AssetServerType.BOE_China, "https://avatar.picovr.com" },
-                { AssetServerType.BOE_Global, "https://avatar-global.picovr.com" },
+                { AssetServerType.BOE_China, "https://pico-avatar-boe.bytedance.net" },
+                { AssetServerType.BOE_Global, "https://pico-avatar-i18n-boe.bytedance.net" }
             };
 
 #endregion
 
         public const bool IsBoe = false;
+        public const bool IsPpe = false;
 
-#region server url
+        #region server url
 
         //Login
         public const string LocalListernAdress = "http://127.0.0.1:{0}/auth/callback/";

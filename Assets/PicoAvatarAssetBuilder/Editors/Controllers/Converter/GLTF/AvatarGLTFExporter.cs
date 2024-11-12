@@ -1002,20 +1002,22 @@ namespace Pico
                             for (int j = 0; j < vertexCount; ++j)
                             {
                                 var t = tangents[j];
+                                if (Mathf.Abs(t.w) < 0.000001f)
+                                {
+                                    t.w = 1.0f;
+                                }
                                 if (context.config.leftToRightHandSpace)
                                 {
                                     if (context.config.leftToRightHandSpaceRule2)
                                     {
                                         t.x = -t.x;
+                                        t.w = -t.w;
                                     }
                                     else
                                     {
                                         t.z = -t.z;
+                                        t.w = -t.w;
                                     }
-                                }
-                                if (Mathf.Abs(t.w) < 0.000001f)
-                                {
-                                    t.w = 1.0f;
                                 }
                                 tangents[j] = t;
                             }
@@ -1562,7 +1564,7 @@ namespace Pico
                 sampler["wrapT"] = (int) wrapMode;
                 context.samplers.Add(sampler);
 
-                var imageData = ExportPNG(utexture, convertShader);
+                var imageData = ExportPNG(utexture, convertShader, sRGB);
                 
                 var image = new JObject();
                 image["name"] = utexture.name;
@@ -1587,9 +1589,9 @@ namespace Pico
                 return info;
             }
 
-            private static byte[] ExportPNG(Texture2D texture, Shader convertShader)
+            private static byte[] ExportPNG(Texture2D texture, Shader convertShader, bool isSRGB)
             {
-                RenderTexture rt = RenderTexture.GetTemporary(texture.width, texture.height, 0, RenderTextureFormat.ARGB32);
+                RenderTexture rt = RenderTexture.GetTemporary(texture.width, texture.height, 0, RenderTextureFormat.ARGB32, readWrite: isSRGB ? RenderTextureReadWrite.sRGB : RenderTextureReadWrite.Linear);
                 if (convertShader)
                 {
                     Graphics.Blit(texture, rt, new Material(convertShader));

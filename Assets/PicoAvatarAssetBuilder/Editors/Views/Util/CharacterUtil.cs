@@ -63,6 +63,8 @@ namespace Pico.AvatarAssetBuilder
 
         public const string Official_1_0_MalePrefabPath = "PavOfficial_1_0_MalePrefab";
         public const string Official_1_0_FemalePrefabPath = "PavOfficial_1_0_FemalePrefab";
+        public const string Official_2_0_MalePrefabPath = "PavOfficial_2_0_MalePrefab";
+        public const string Official_2_0_FemalePrefabPath = "PavOfficial_2_0_FemalePrefab";
 
         public static string CharacterFolderPath => CharacterManager.instance.GetCurrentCharacterPath();
 

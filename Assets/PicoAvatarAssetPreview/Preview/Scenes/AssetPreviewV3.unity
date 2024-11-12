@@ -1312,16 +1312,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appSettings:
-    usingMatrixService: 0
+    enableStaticMeshBatching: 1
     autoGarbageCollection: 1
     serverType: 1
     mainCamera: {fileID: 0}
     additiveGI: 0
     enabledFullscreenFeatures: 0
     localResourcePath: 
-  loginSettings:
-    userID: 
-    accessToken: act.pico.avatar.supertest
   logSettings:
     debugLogMasks: -1
     enableLogTime: 1
@@ -1335,7 +1332,7 @@ MonoBehaviour:
     meshVertexDataFormat: 0
     morphVertexDataFormat: 0
     avatarTranspQueueStart: 3500
-    avatarOpauqeQueueStart: 2000
+    avatarOpaqueQueueStart: 0
     enableRimProfile: 0
     lineProfileDistance: 0
     materialConfiguration: {fileID: 11400000, guid: 497800a3511954c87ad7b5f40de5e9b8,
@@ -1388,7 +1385,6 @@ MonoBehaviour:
     enableStats: 0
     enableSystemInfo: 0
     traceNativeCaller: 0
-  accessType: 1
 --- !u!1 &6776270303080775020
 GameObject:
   m_ObjectHideFlags: 0

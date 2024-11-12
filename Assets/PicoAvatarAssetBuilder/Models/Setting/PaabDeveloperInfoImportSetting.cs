@@ -46,12 +46,11 @@ namespace Pico
             public int appType;
             [SerializeField] 
             public bool canUploadOfficialComponent;
-            //server app key end
-
-            [SerializeField]
+			//server app key end
+			[SerializeField]
             public int serverType;
 
-            public Dictionary<string, string> packetContent = new Dictionary<string, string>();
+			public Dictionary<string, string> packetContent = new Dictionary<string, string>();
 
             public bool HasToken
             {
@@ -107,7 +106,7 @@ namespace Pico
                 this.appID = appInfo.Value<string>("pico_app_id");
                 this.appName = appInfo.Value<string>("name");
                 this.isOfficial = appInfo.Value<bool>("is_official");
-                this.appType = appInfo.Value<int>("app_type");
+                this.appType = appInfo.Value<int>("app_type");//应用的形象准入模式
                 this.canUploadOfficialComponent = appInfo.Value<bool>("upload_official_component");
 
                 foreach (var packInfo in orgPacks)

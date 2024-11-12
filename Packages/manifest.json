@@ -15,7 +15,7 @@
     "com.unity.vectorgraphics": "2.0.0-preview.21",
     "com.unity.visualscripting": "1.8.0",
     "com.unity.xr.picoxr": "https://github.com/Pico-Developer/PICO-Unity-Integration-SDK.git",
-    "org.byted.avatar.sdk": "https://github.com/Pico-Developer/PICO-Avatar-SDK-Unity.git#V2.0.0",
+    "org.byted.avatar.sdk": "https://github.com/Pico-Developer/PICO-Avatar-SDK-Unity.git#V2.1.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

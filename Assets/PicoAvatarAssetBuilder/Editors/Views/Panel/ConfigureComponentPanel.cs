@@ -17,6 +17,7 @@ namespace Pico
 {
     namespace AvatarAssetBuilder
     {
+
         public class ConfigureComponentPanel : AssetImportSettingsPanel
         {
             enum ErrorType
@@ -61,7 +62,7 @@ namespace Pico
                 Finish,
             }
 
-            
+
 
             private class ConvertWork
             {
@@ -79,6 +80,10 @@ namespace Pico
             const int LOD_GROUP_COUNT = 3;
             const int CHECK_LOD1_TRIANGLE_COUNT = 25000;
             const int CHECK_LOD2_TRIANGLE_COUNT = 15000;
+            const int RECOMMENDED_LOD2_TRIANGLE_COUNT = 7500;
+
+            int[] _checkLodTriangleCounts = new int[2]{ CHECK_LOD1_TRIANGLE_COUNT, CHECK_LOD2_TRIANGLE_COUNT };
+
             private PaabComponentImportSetting _setting;
             private GameObject _skeleton;
             private BaseInfoWidget _baseInfoWidget = null;
@@ -114,9 +119,9 @@ namespace Pico
                 if (supportShaderThemeList == null || supportShaderThemeList.Count == 0)
                 {
                     supportShaderThemeList = new List<string>();
-                    foreach (var VARIABLE in Enum.GetNames(typeof(OfficialShaderTheme)))
+                    foreach (var kp in AvatarConstants.s_officialShaderThemeNames)
                     {
-                        supportShaderThemeList.Add("PAV/URP/" + VARIABLE);
+                        supportShaderThemeList.Add(kp.Value);
                     }
                 }
                 return supportShaderThemeList;
@@ -237,7 +242,8 @@ namespace Pico
                 else
                 {
                     PaabComponentImportSetting.ComponentType[] types;
-                    if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official)
+                    if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official_1_0
+                        || _setting.componentSource == PaabComponentImportSetting.ComponentSource.Official_2_0)
                     {
                         types = new PaabComponentImportSetting.ComponentType[]
                         {
@@ -408,7 +414,7 @@ namespace Pico
                         Debug.LogError("skeleton zip file not exist: " + skeletonPath);
                     }
                 }
-                else if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official)
+                else if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official_1_0)
                 {
                     var configText = ComponentListPanel.instance.CharacterInfo.character.config;
                     var config = JsonConvert.DeserializeObject<JObject>(configText);
@@ -421,36 +427,95 @@ namespace Pico
                             switch (sex)
                             {
                                 case "male":
-                                {
-                                    var prefab = Resources.Load<GameObject>(CharacterUtil.Official_1_0_MalePrefabPath);
-                                    if (prefab)
                                     {
-                                        _skeleton = Instantiate(prefab);
-                                        _skeleton.hideFlags = HideFlags.HideAndDontSave;
-                                        _skeleton.name = prefab.name;
+                                        var prefab = Resources.Load<GameObject>(CharacterUtil.Official_1_0_MalePrefabPath);
+                                        if (prefab)
+                                        {
+                                            _skeleton = Instantiate(prefab);
+                                            _skeleton.hideFlags = HideFlags.HideAndDontSave;
+                                            _skeleton.name = prefab.name;
+                                        }
+                                        else
+                                        {
+                                            Debug.LogError("Unable to load Official_1_0_MalePrefab");
+                                        }
                                     }
-                                    else
-                                    {
-                                        Debug.LogError("Unable to load Official_1_0_MalePrefab");
-                                    }
-                                }
                                     break;
                                 case "female":
-                                {
-                                    var prefab =
-                                        Resources.Load<GameObject>(CharacterUtil.Official_1_0_FemalePrefabPath);
+                                    {
+                                        var prefab =
+                                            Resources.Load<GameObject>(CharacterUtil.Official_1_0_FemalePrefabPath);
 
-                                    if (prefab)
-                                    {
-                                        _skeleton = Instantiate(prefab);
-                                        _skeleton.hideFlags = HideFlags.HideAndDontSave;
-                                        _skeleton.name = prefab.name;
+                                        if (prefab)
+                                        {
+                                            _skeleton = Instantiate(prefab);
+                                            _skeleton.hideFlags = HideFlags.HideAndDontSave;
+                                            _skeleton.name = prefab.name;
+                                        }
+                                        else
+                                        {
+                                            Debug.LogError("Unable to load Official_1_0_FemalePrefab");
+                                        }
                                     }
-                                    else
+                                    break;
+                                default:
+                                    Debug.LogError("Invalid sex type " + sex);
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogError("Unable to find sex in config.json/info");
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError("Unable to find info in config.json");
+                    }
+                }
+                else if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official_2_0)
+                {
+                    var configText = ComponentListPanel.instance.CharacterInfo.character.config;
+                    var config = JsonConvert.DeserializeObject<JObject>(configText);
+                    if (config != null && config.TryGetValue("info", out JToken infoToken))
+                    {
+                        var info = infoToken as JObject;
+                        if (info != null && info.TryGetValue("sex", out JToken sexToken))
+                        {
+                            var sex = sexToken.ToString();
+                            switch (sex)
+                            {
+                                case "male":
                                     {
-                                        Debug.LogError("Unable to load Official_1_0_FemalePrefab");
+                                        var prefab = Resources.Load<GameObject>(CharacterUtil.Official_2_0_MalePrefabPath);
+                                        if (prefab)
+                                        {
+                                            _skeleton = Instantiate(prefab);
+                                            _skeleton.hideFlags = HideFlags.HideAndDontSave;
+                                            _skeleton.name = prefab.name;
+                                        }
+                                        else
+                                        {
+                                            Debug.LogError("Unable to load Official_2_0_MalePrefab");
+                                        }
                                     }
-                                }
+                                    break;
+                                case "female":
+                                    {
+                                        var prefab =
+                                            Resources.Load<GameObject>(CharacterUtil.Official_2_0_FemalePrefabPath);
+
+                                        if (prefab)
+                                        {
+                                            _skeleton = Instantiate(prefab);
+                                            _skeleton.hideFlags = HideFlags.HideAndDontSave;
+                                            _skeleton.name = prefab.name;
+                                        }
+                                        else
+                                        {
+                                            Debug.LogError("Unable to load Official_2_0_FemalePrefab");
+                                        }
+                                    }
                                     break;
                                 default:
                                     Debug.LogError("Invalid sex type " + sex);
@@ -905,6 +970,7 @@ namespace Pico
                 int lodIndex = GetLodGroupIndex(lodGroup);
                 var itemAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(
                     AssetBuilderConfig.instance.uiDataAssetsPath + "UxmlWidget/ConfigureComponentItemWidget.uxml");
+                //Debug.Log($"pico upload what xml is being used? {AssetBuilderConfig.instance.uiDataAssetsPath + "UxmlWidget/ConfigureComponentItemWidget.uxml"}");
                 var item = itemAsset.Instantiate();
                 lodGroup.Insert(1 + itemIndex, item);
 
@@ -968,7 +1034,7 @@ namespace Pico
                     {
                         if (_objectFieldMaterial == null)
                             _objectFieldMaterial = new Dictionary<ObjectField, Material>();
-                        
+
                         if (_objectFieldMaterial != null && _objectFieldMaterial.ContainsKey(officialMaterialField))
                             _objectFieldMaterial[officialMaterialField] = newMaterial;
                         else
@@ -985,8 +1051,8 @@ namespace Pico
                     SetCustomMaterial(lodIndex, lodGroup, lodGroup.IndexOf(item) - 1, eve.newValue as Material);
                 });
                 RegisterSelectObjectFieldValue(customMaterialField);
-
-                SetShaderType2(lodIndex, lodGroup, lodGroup.IndexOf(item) - 1);
+                //pico upload This code is redundant since the GameObject is always null when add lod group
+                SetShaderType2(lodIndex, lodGroup, lodGroup.IndexOf(item) - 1); 
 
                 SetItemTips(item);
 
@@ -1039,35 +1105,19 @@ namespace Pico
 
             public static OfficialShaderTheme getOfficialShaderThemeByName(string shaderName)
             {
-                if (shaderName == "PAV/URP/PicoPBR")
+                if (AvatarConstants.s_officialShaderNameThemes.ContainsKey(shaderName))
                 {
-                    return OfficialShaderTheme.PicoPBR;
+                    return AvatarConstants.s_officialShaderNameThemes[shaderName];
                 }
-                else if (shaderName == "PAV/URP/PicoNPR")
-                {
-                    return OfficialShaderTheme.PicoNPR;
-                }
-                else
-                {
-                    return OfficialShaderTheme.PicoPBR;
-                }
+                return OfficialShaderTheme.PicoPBR;
             }
 
-            private string GetDefaultShaderNameBy(string shaderType1)
+            private string GetDefaultShaderNameBy(string shaderType)
             {
-                if (shaderType1 == "PBR")
+                if (AvatarConstants.s_shaderNames.ContainsKey(shaderType))
                 {
-                    return "PAV/URP/PicoPBR";
+                    return AvatarConstants.s_shaderNames[shaderType];
                 }
-                else if (shaderType1 == "Unlit")
-                {
-                    return "PAV/URP/Unlit";
-                }
-                else if (shaderType1 == "NRP")
-                {
-                    return "PAV/URP/PicoNPR";
-                }
-
                 return "";
             }
 
@@ -1158,7 +1208,7 @@ namespace Pico
             {
                 return item.Q<DropdownField>("ShaderType2Dropdown");
             }
-            
+
 
             private void SwitchShaderType1(string shaderType1)
             {
@@ -1244,7 +1294,7 @@ namespace Pico
                     EditorUtility.DisplayDialog("Error", "Only Support PAV Material!", "ok");
                     return;
                 }
-                
+
                 rendererItem.officialMaterial = obj;
             }
 
@@ -1323,7 +1373,7 @@ namespace Pico
                     }
                 });
             }
-
+            //pico upload skin mesh renderer set entry, there a two tiers 
             private void OnSetGameObjectUI(int lodIndex, GroupBox lodGroup, int itemIndex, GameObject obj)
             {
                 if (obj == null)
@@ -1338,7 +1388,7 @@ namespace Pico
                     {
                         itemIndex = 0;
                     }
-                    
+
                     // 这里遍历一下 skinnedMeshRenderers 然后生成UI，根据UI的选择，得到配置。
                     // 这里的配置有：生成的官方材质的类型、是否删除原来的custom材质
                     var messages = new List<Renderer>();
@@ -1361,7 +1411,7 @@ namespace Pico
                         {
                             continue;
                         }
-                        
+
                         messages.Add(renderer);
                     }
                     CommonDialogWindow.ShowMaterialConfigDialog(messages);
@@ -1372,7 +1422,7 @@ namespace Pico
                     }
                 }
             }
-            
+
             public void OnSetGameObject(int lodIndex, GroupBox lodGroup, int itemIndex, GameObject obj)
             {
                 if (obj == null)
@@ -1387,7 +1437,7 @@ namespace Pico
                     {
                         itemIndex = 0;
                     }
-                    
+
                     for (int i = 0; i < skinnedMeshRenderers.Length; ++i)
                     {
                         var renderer = skinnedMeshRenderers[i];
@@ -1460,12 +1510,12 @@ namespace Pico
                             var saveCustomMaterial = dic[renderer].saveCustomMaterial;
                             var shaderTheme = dic[renderer].ShaderTheme;
                             officialMaterial = MaterialConvertWindow.ConverterMaterial(customMaterial, officialMaterial, shaderTheme);//
-                            
+
                             if (!saveCustomMaterial)
                                 customMaterial = null;
                         }
                         else
-                        {   
+                        {
                             customMaterial = material;
                         }
                     }
@@ -1498,7 +1548,7 @@ namespace Pico
                 //var shaderType2Group = item.Q<GroupBox>("ShaderType2Group");
                 //shaderType2Group.style.display = renderer ? DisplayStyle.Flex : DisplayStyle.None;
 
-                RendererItem rendererItem = _rendererItems[lodIndex][itemIndex];
+                RendererItem rendererItem = _rendererItems[lodIndex][itemIndex]; //pico upload this must be the render item uploaded to server
                 rendererItem.renderer = renderer;
                 rendererItem.officialMaterial = officialMaterial;
                 if (officialMaterial != null)
@@ -1588,9 +1638,8 @@ namespace Pico
                             rendererItem.errorType = ErrorType.GameObject;
                             continue;
                         }
-                        
+
                         var officialMaterial = rendererItem.officialMaterial;
-                        var shaderName = GetShaderNameBy(GetShaderType1(), rendererItem.shaderType2);
 
                         // error: not official shader
                         if (officialMaterial == null)
@@ -1598,28 +1647,56 @@ namespace Pico
                             rendererItem.checkResult = string.Format(ErrorPrefix + "{0} has no official material", renderer.gameObject.name);
                             rendererItem.errorType = ErrorType.Material;
                         }
-                        else if (!getSupportShaderThemeList().Contains(officialMaterial.shader.name))
-                        {
-                            rendererItem.checkResult = string.Format(ErrorPrefix + "{0} used unofficial shader",
-                                renderer.gameObject.name);
-                            rendererItem.errorType = ErrorType.Material;
-                        }
                         else
                         {
-                            // warning: miss official texture
-                            var textureNames = GeShaderTextureNames(GetShaderType1(), rendererItem.shaderType2);
-                            for (int k = 0; k < textureNames.Length; ++k)
-                            {
-                                if (officialMaterial.GetTexture(textureNames[k]) == null)
-                                {
-                                    rendererItem.checkResult = string.Format(WarningPrefix + "{0} missing texture: {1}",
-                                        renderer.gameObject.name, textureNames[k]);
-                                    rendererItem.errorType = ErrorType.Material;
-                                    break;
-                                }
-                            }
-                        }
+							var shaderName = officialMaterial.shader.name;
+							var isAvatarLit = AvatarManager.IsAvatarLitShader(getOfficialShaderThemeByName(shaderName));
+                            
+							if (!getSupportShaderThemeList().Contains(officialMaterial.shader.name))
+							{
+								rendererItem.checkResult = string.Format(ErrorPrefix + "{0} used unofficial shader",
+									renderer.gameObject.name);
+								rendererItem.errorType = ErrorType.Material;
+							}
+							else if (!AvatarConstants.s_shaderType1s.ContainsKey(shaderName))
+							{
+								rendererItem.checkResult = string.Format(ErrorPrefix + "{0} cannot find material shader name", renderer.gameObject.name);
+								rendererItem.errorType = ErrorType.Material;
+							}
+                            // Check and report a error message if this Avatar is official 1.0 and update to a part of official 2.0 material, it will cause display error 
+							else if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official_1_0 && isAvatarLit)
+							{
+								rendererItem.checkResult = string.Format(ErrorPrefix + "{0} used official 2.0 shader to offcial 1.0 avatar",
+									renderer.gameObject.name);
+								rendererItem.errorType = ErrorType.Material;
+							}
+							// Check and report a error message if this Avatar is official 2.0 and update to a part of official 1.0 material, it will cause display error 
+							else if (_setting.componentSource == PaabComponentImportSetting.ComponentSource.Official_2_0 && !isAvatarLit)
+							{
+								rendererItem.checkResult = string.Format(ErrorPrefix + "{0} used official 1.0 shader to offcial 2.0 avatar",
+									renderer.gameObject.name);
+								rendererItem.errorType = ErrorType.Material;
+							}
+							else
+							{
+								// warning: miss official texture
 
+								string shaderType1 = AvatarConstants.s_shaderType1s[shaderName];
+								//var textureNames = GeShaderTextureNames(GetShaderType1(), rendererItem.shaderType2);
+								var textureNames = GeShaderTextureNames(shaderType1, rendererItem.shaderType2);
+								for (int k = 0; k < textureNames.Length; ++k)
+								{
+									if (officialMaterial.GetTexture(textureNames[k]) == null)
+									{
+										rendererItem.checkResult = string.Format(WarningPrefix + "{0} missing texture: {1}",
+											renderer.gameObject.name, textureNames[k]);
+										rendererItem.errorType = ErrorType.Material;
+										break;
+									}
+								}
+							}
+						}
+                        
                         // error: material count > 1
                         if (renderer.sharedMaterials.Length > 1)
                         {
@@ -1630,15 +1707,16 @@ namespace Pico
 
                         if (renderer is SkinnedMeshRenderer)
                         {
+                            var skinRenderer = (renderer as SkinnedMeshRenderer);
                             // error: submesh count > 1
-                            if ((renderer as SkinnedMeshRenderer).sharedMesh.subMeshCount > 1)
+                            if (skinRenderer.sharedMesh.subMeshCount > 1)
                             {
                                 rendererItem.checkResult = string.Format(ErrorPrefix + "{0} had more than 1 submesh",
                                     renderer.gameObject.name);
                                 rendererItem.errorType = ErrorType.GameObject;
                             }
 
-                            if (!CheckSkeletonCompatible(_skeleton, (renderer as SkinnedMeshRenderer).bones))
+                            if (!CheckSkeletonCompatible(_skeleton, skinRenderer.bones))
                             {
                                 rendererItem.checkResult = string.Format(
                                     ErrorPrefix + "{0} bones not compatible with skeleton",
@@ -1654,23 +1732,24 @@ namespace Pico
                                     renderer.gameObject.name);
                                 rendererItem.errorType = ErrorType.GameObject;
                             }
-                            
-                            vertsInComponent += (renderer as SkinnedMeshRenderer).sharedMesh.vertexCount;
-                            trianglesInComponent += (renderer as SkinnedMeshRenderer).sharedMesh.triangles.Length / 3;
+                            vertsInComponent += skinRenderer.sharedMesh.vertexCount;
+                            trianglesInComponent += skinRenderer.sharedMesh.triangles.Length / 3;
+                        }
+                        else
+						{
+                            rendererItem.checkResult = string.Format(
+                                   ErrorPrefix + "{0} only supports skinned mesh renderer",
+                                   renderer.gameObject.name);
+                            rendererItem.errorType = ErrorType.GameObject;
                         }
                     }
                     if (curImportSettings.assetImportSettingsType == AssetImportSettingsType.BaseBody)
                     {
-                        // check this _rendererItems[i] verts count is no more than 20000.
-                        if (i == 1 && trianglesInComponent >= CHECK_LOD1_TRIANGLE_COUNT)
+                        // check this _rendererItems[i] triangle count
+                        if ((i == 1 || i == 2) && trianglesInComponent >= _checkLodTriangleCounts[i - 1])
                         {
-                            checkContext.globalResults.Add(string.Format(ErrorPrefix + "LOD {0} has {1} triangles, and must be less than {2} triangles to be uploaded.", i, trianglesInComponent, CHECK_LOD1_TRIANGLE_COUNT));
+                            checkContext.globalResults.Add(string.Format(ErrorPrefix + "LOD {0} has {1} triangles, and must be less than {2} triangles to be uploaded.", i, trianglesInComponent, _checkLodTriangleCounts[i - 1]));
                         }
-                        else if (i == 2 && trianglesInComponent >= CHECK_LOD2_TRIANGLE_COUNT)
-                        {
-                            checkContext.globalResults.Add(string.Format(ErrorPrefix + "LOD {0} has {1} triangles, and must be less than {2} triangles to be uploaded.", i, trianglesInComponent, CHECK_LOD2_TRIANGLE_COUNT));
-                        }
-
                         if (trianglesInComponent < minPrimitiveCount)
                             minPrimitiveCount = trianglesInComponent;
                     }
@@ -1680,7 +1759,7 @@ namespace Pico
                 {
                     if (minPrimitiveCount >= CHECK_LOD2_TRIANGLE_COUNT)
                     {
-                        checkContext.globalResults.Add(string.Format(WarningPrefix + "Without an LOD under 15,000 triangles, the avatar cannot be converted to public. The recommended triangle count is 7,500."));
+                        checkContext.globalResults.Add(string.Format(WarningPrefix + "Without an LOD under {0} triangles, the avatar cannot be converted to public. The recommended triangle count is {1}.", CHECK_LOD2_TRIANGLE_COUNT, RECOMMENDED_LOD2_TRIANGLE_COUNT));
                     }
                 }
                 // error: shoes setting over limit
@@ -1699,7 +1778,7 @@ namespace Pico
 
                     if (rendererCount == 0)
                     {
-                        var result = string.Format(ErrorPrefix + "LOD0 need at least one SkinnedMeshRenderer");
+                        var result = string.Format(ErrorPrefix + "LOD0 need at least one skinned mesh renderer");
                         _rendererItems[0][0].checkResult = result;
                         _rendererItems[0][0].errorType = ErrorType.GameObject;
                     }

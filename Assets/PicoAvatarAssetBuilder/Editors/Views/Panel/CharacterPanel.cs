@@ -328,6 +328,7 @@ namespace Pico
             private VisualElement localIcon;
             //private CharacterCellType cellType;
             private bool isOfficial = false;
+            private int officialVersion = 0;
             private bool isMyApp = false;
             private bool canUpdate = false;
             private List<CharacterCellBtnType> btnList = new List<CharacterCellBtnType>();
@@ -346,7 +347,7 @@ namespace Pico
                 officialBg = _cellVisualElement.Q("officialBg");
                 myBg = _cellVisualElement.Q("myBg");
                 officialTag = _cellVisualElement.Q("officialTag");
-                officiaTagLabel = _cellVisualElement.Q<Label>("officailTagText");
+                officiaTagLabel = _cellVisualElement.Q<Label>("officialTag");
                 myTag = _cellVisualElement.Q("myTag");
                 updateBtn = _cellVisualElement.Q<Button>("updateBtn");
                 tryOnBtn = _cellVisualElement.Q<Button>("tryOnBtn");
@@ -393,6 +394,17 @@ namespace Pico
                 name.text = data.characterData.character.name;
                 officialTag.SetActive(isOfficial);
                 myTag.SetActive(!isOfficial);
+                if (isOfficial)
+                {
+                    if (officialVersion == 1)
+                    {
+                        officiaTagLabel.text = "Official 1.0";
+                    }
+                    else if (officialVersion == 2)
+                    {
+                        officiaTagLabel.text = "Official 2.0";
+                    }
+                }
                 officialBg.SetActive(isOfficial);
                 myBg.SetActive(!isOfficial);
                 iconImg.SetTexture(data.characterData.character.cover);
@@ -423,7 +435,15 @@ namespace Pico
                 if (data == null)
                     return;
                 //isOfficial = data.characterData.app.is_official;
-                isOfficial = data.characterData.character.avatar_style == "PicoAvatar3";
+                isOfficial = data.characterData.character.avatar_style == "PicoAvatar3" || data.characterData.character.avatar_style == "PicoAvatar4";
+                if (data.characterData.character.avatar_style == "PicoAvatar3")
+                {
+                    officialVersion = 1;
+                }
+                else if (data.characterData.character.avatar_style == "PicoAvatar4")
+                {
+                    officialVersion = 2;
+                }
                 // var loginData = LoginUtils.LoadLoginSetting();
                 // isMyApp = !string.IsNullOrEmpty(loginData.appID) && data.characterData.app.pico_app_id == loginData.appID;
                 // canUpdate = isMyApp && data.characterData.character.avatar_style != "PicoAvatar3";
@@ -469,6 +489,16 @@ namespace Pico
                 {
                     btn1.SetEnabled(false);
                     btn2.SetEnabled(false);
+                }
+                
+                // for creator, 
+                if (resultfromPAAB.appID == "-1")
+                {
+                    btn2.SetVisibility(false);
+                    if (MainMenuUIManager.instance.PAAB_OPEN == true)
+                    {
+                        btn1.SetVisibility(false);
+                    }
                 }
             }
 

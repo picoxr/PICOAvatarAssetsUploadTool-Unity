@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9d48d4fed7c4e9982313687b937785, type: 3}
   m_Name: PaabDeveloperInfoImportSetting
   m_EditorClassIdentifier: 
-  loginToken: 
-  saveTime: 
-  appPackInfoServerJson: 
-  userName: 
-  userID: 
-  userThumbnail: 
-  orzID: 
-  appID: 
-  appName: 
+  loginToken: soX6Wt2VY5J9YGgfwQwawyWp0gmpZlbkFuTZrF7gi9FCbNm4jjSqcnnx0fgzqxZap7BdlRE1rfPsfu8u9Eawng==
+  saveTime: 1731394218
+  appPackInfoServerJson: "{\"code\":0,\"em\":\"success\",\"et\":\"success\",\"data\":{\"user_id\":\"805274097290840\",\"user\":{\"id\":\"805274097290840\",\"name\":\"\u6211\u662F\u65E0\u654C\u7684\",\"avatar_url\":\"https://p3-passport.byteacctimg.com/img/user-avatar/ae9e6f7553727ec597c943845b082a06~300x300.image\"},\"address\":{\"phone\":\"183******95\",\"email\":\"\"},\"org_packs\":[{\"org\":{\"org_id\":\"7254363188479950881\",\"name\":\"CookRoom\"},\"apps\":[{\"pico_app_id\":\"5b3e9171e9ca8afa0bb8ac9c2d0ac719\",\"name\":\"Dance\",\"is_official\":false,\"upload_official_component\":false},{\"pico_app_id\":\"71b9ebc2bfb3f9fcf214f483324e5fcb\",\"name\":\"TestAppMode\",\"is_official\":false,\"upload_official_component\":false},{\"pico_app_id\":\"9772a8c9d8e6a871928af4a92936b726\",\"name\":\"AiJiuShiWan\",\"is_official\":false,\"upload_official_component\":false}]},{\"org\":{\"org_id\":\"7106687947486986245\",\"name\":\"\u8FD9\u662F\u5565\u4E1C\u897F\"},\"apps\":[{\"pico_app_id\":\"c8e18d21899ece4ca6fdc44c1aab1370\",\"name\":\"test_xxx_1\",\"is_official\":false,\"upload_official_component\":true},{\"pico_app_id\":\"d8a908e6fbf066d73943f7b0d572bf3b\",\"name\":\"12121212\",\"is_official\":false,\"upload_official_component\":false}]},{\"org\":{\"org_id\":\"7278120739453239350\",\"name\":\"Developers\"},\"apps\":[{\"pico_app_id\":\"a3e35b37bc4d8394e2912928caded3d8\",\"name\":\"Developers\",\"is_official\":false,\"upload_official_component\":false},{\"pico_app_id\":\"f6e04a1ffb52de746fc2965c1750e4f7\",\"name\":\"AvatarTest0403\",\"is_official\":false,\"upload_official_component\":false}]},{\"org\":{\"org_id\":\"7257069358436859961\",\"name\":\"PICO
+    Avatar cn\"},\"apps\":[{\"pico_app_id\":\"b9b26fc936e96819441c162da61a9294\",\"name\":\"os
+    avatar\",\"is_official\":true,\"upload_official_component\":true}]},{\"org\":{\"org_id\":\"7295665385171386403\",\"name\":\"AVATAR
+    \u4ECE\u8BED\"},\"apps\":[{\"pico_app_id\":\"95799a2836231282ef6435658966eee1\",\"name\":\"\u6D4B\u8BD5\u5185\u5BB9\",\"is_official\":false,\"upload_official_component\":false}]}],\"tickets\":[{\"ticket\":{\"id\":\"479\",\"pico_app_id\":\"95799a2836231282ef6435658966eee1\",\"role\":1,\"comment\":\"\u660E\u98DE\",\"status\":1,\"create_time\":1713839461},\"app\":{\"pico_app_id\":\"95799a2836231282ef6435658966eee1\",\"name\":\"\u6D4B\u8BD5\u5185\u5BB9\",\"is_official\":false,\"upload_official_component\":false}},{\"ticket\":{\"id\":\"472\",\"pico_app_id\":\"b9b26fc936e96819441c162da61a9294\",\"role\":1,\"comment\":\"\",\"status\":1,\"create_time\":1711079379},\"app\":{\"pico_app_id\":\"b9b26fc936e96819441c162da61a9294\",\"name\":\"os
+    avatar\",\"is_official\":false,\"upload_official_component\":false}},{\"ticket\":{\"id\":\"429\",\"pico_app_id\":\"a3e35b37bc4d8394e2912928caded3d8\",\"role\":1,\"comment\":\"\u91D1\u660E\u98DE\",\"status\":1,\"create_time\":1694760861},\"app\":{\"pico_app_id\":\"a3e35b37bc4d8394e2912928caded3d8\",\"name\":\"Developers\",\"is_official\":false,\"upload_official_component\":false}},{\"ticket\":{\"id\":\"400\",\"pico_app_id\":\"c8e18d21899ece4ca6fdc44c1aab1370\",\"role\":1,\"comment\":\"\u91D1\u660E\u98DEtest\\n\",\"status\":1,\"create_time\":1690798111},\"app\":{\"pico_app_id\":\"c8e18d21899ece4ca6fdc44c1aab1370\",\"name\":\"test_xxx_1\",\"is_official\":false,\"upload_official_component\":false}}],\"app\":{\"pico_app_id\":\"5b3e9171e9ca8afa0bb8ac9c2d0ac719\",\"name\":\"Dance\",\"is_official\":false,\"upload_official_component\":false},\"role\":4}}"
+  userName: "\u6211\u662F\u65E0\u654C\u7684"
+  userID: 805274097290840
+  userThumbnail: https://p3-passport.byteacctimg.com/img/user-avatar/ae9e6f7553727ec597c943845b082a06~300x300.image
+  orzID: 7254363188479950881
+  appID: 5b3e9171e9ca8afa0bb8ac9c2d0ac719
+  appName: Dance
   isOfficial: 0
   appType: 0
   canUploadOfficialComponent: 0
-  serverType: 0
+  serverType: 1

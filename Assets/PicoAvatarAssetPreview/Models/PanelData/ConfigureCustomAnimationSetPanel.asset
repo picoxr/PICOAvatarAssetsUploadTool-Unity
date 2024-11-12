@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c9d0f5707404714ac69af6bd211cad, type: 3}
+  m_Script: {fileID: 11500000, guid: c58de05ccbd0f4e219681cbb68062026, type: 3}
   m_Name: ConfigureCustomAnimationSetPanel
   m_EditorClassIdentifier: 
   previousPanel: {fileID: 0}

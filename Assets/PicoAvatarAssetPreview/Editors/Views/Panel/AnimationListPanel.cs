@@ -128,7 +128,7 @@ namespace Pico.AvatarAssetPreview
                 }
             }
             // PicoAvatar3 style
-            else if(characterInfo.character.avatar_style == "PicoAvatar3")
+            else if(characterInfo.character.avatar_style == "PicoAvatar3" || characterInfo.character.avatar_style == "PicoAvatar4")
             {
                 clipNames.AddRange(new List<string>{"idle", "lHandFist", "rHandFist", "walking", "walkingBack", "walkingLeft", "walkingRight", "sit_ground", "sit_midStoolNormal", "sit_highStool", "smile"});
             }

@@ -23,8 +23,9 @@ namespace Pico
 
             public enum ComponentSource : int
             {
-                Official,
+                Official_1_0,
                 Custom,
+                Official_2_0,
             }
 
             public enum ComponentType : int
@@ -58,7 +59,7 @@ namespace Pico
                 Body,
             }
 
-            public ComponentSource componentSource = ComponentSource.Official;
+            public ComponentSource componentSource = ComponentSource.Official_1_0;
             public ComponentType componentType = ComponentType.BaseBody;
             public string serverCategory;  // 上传资源时使用
 

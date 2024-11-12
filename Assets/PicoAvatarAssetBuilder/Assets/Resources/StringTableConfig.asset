@@ -90,7 +90,7 @@ MonoBehaviour:
   - key: OfficialMaterialTip
     values:
     - language: en
-      value: 'Officially provided Material, with two types: PBR and NPR.'
+      value: 'Officially provided Material, with two types: PBR (v1 and v2) and NPR.'
   - key: CustomMaterialTip
     values:
     - language: en
